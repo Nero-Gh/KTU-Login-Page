@@ -171,12 +171,6 @@ body {
   }
 }
 @media only screen and (max-width: 450px) {
-  .container {
-    padding-top: 7rem;
-  }
-  .container img {
-    margin-top: 2rem;
-  }
   .container .container-login-form form {
     width: 80% !important;
   }
