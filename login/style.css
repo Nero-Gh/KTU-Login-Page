@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  height: inherit;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3px;
+}
+.container .container-navigation {
+  background: #15631e;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .container-navigation .container-logo img {
+  opacity: 0.2;
+  width: 23rem;
+  margin-bottom: 5rem;
+  margin-top: 70px;
+  margin-left: -10rem;
+}
+.container .container-navigation .nav {
+  margin-top: 5rem;
+}
+.container .container-navigation .nav .nav-list {
+  display: flex;
+}
+.container .container-navigation .nav .nav-list .nav-item:hover {
+  background: #103314;
+  transition: 400ms ease;
+}
+.container .container-navigation .nav .nav-list .nav-item .nav-link {
+  display: block;
+  padding: 5px 10px;
+  color: #ececec;
+  color: #fff;
+}
+.container .container-login .container-login-image {
+  display: none;
+}
+.container .container-login .container-login-form {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .container-login .container-login-form .login-form-title {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+.container .container-login .container-login-form form {
+  width: 25rem;
+  padding: 10px;
+}
+.container .container-login .container-login-form form input {
+  width: 100%;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #15631e;
+  color: #103314;
+}
+.container .container-login .container-login-form form input[type=text]:focus,
+.container .container-login .container-login-form form input[type=password]:focus {
+  border: 3px solid #15631e;
+}
+.container .container-login .container-login-form form .login-form-btn {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .container-login .container-login-form form .login-form-btn button {
+  padding: 5px 15px;
+  background: #15631e;
+  color: #fff;
+  border-style: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container .container-login .container-login-form form .login-form-btn button:hover {
+  transform: scale(1.1);
+}
+.container .container-login .container-login-form form .login-form-btn a {
+  color: #15631e;
+}
+.container .container-login .container-login-form form .login-form-btn a:hover {
+  color: red;
+}
+.container .container-login .login-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 780px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .container .container-navigation {
+    display: none;
+  }
+  .container .container-login .container-login-image {
+    display: block;
+    width: 20%;
+    height: 20%;
+    margin: 3rem auto 0 auto;
+  }
+  .container .container-login .container-login-image img {
+    width: 80%;
+  }
+  .container .container-login .container-login-form {
+    margin-top: 10%;
+  }
+  .container .container-login .container-login-form .login-form-title {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .container .container-login .login-nav {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #15631e;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+  }
+  .container .container-login .login-nav .login-nav-list {
+    display: flex;
+  }
+  .container .container-login .login-nav .login-nav-list .login-nav-item:hover {
+    background: #103314;
+    transition: 400ms ease;
+  }
+  .container .container-login .login-nav .login-nav-list .login-nav-item .login-nav-link {
+    padding: 5px 15px;
+    color: #fff;
+  }
+  .container .container-login .login-nav .login-nav-list .login-nav-item .login-nav-link:hover {
+    color: #fff;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .container {
+    padding-top: 7rem;
+  }
+  .container img {
+    margin-top: 2rem;
+  }
+  .container .container-login-form form {
+    width: 80% !important;
+  }
+}/*# sourceMappingURL=style.css.map */
