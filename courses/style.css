@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.navigation-section {
+  background: #15631e;
+  height: 100vh;
+  width: 100%;
+  padding-left: 1rem;
+  transition: 400ms ease-in;
+}
+.navigation-section .top-nav {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation-section .top-nav .close-menu {
+  width: 35px;
+  z-index: 2;
+  margin-top: -24px;
+  margin-left: -50px;
+  cursor: pointer;
+  display: none;
+}
+.navigation-section .top-nav .logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: 4rem;
+}
+.navigation-section .top-nav .logo-link .logo {
+  width: inherit;
+}
+.navigation-section .top-nav .logo-link .logo-text {
+  color: #fff;
+  font-size: 2rem;
+}
+.navigation-section .nav {
+  margin-top: 30px;
+}
+.navigation-section .nav .nav-list {
+  width: 100%;
+}
+.navigation-section .nav .nav-list .active {
+  border: 1px solid #ececec;
+  background: #103314;
+  padding-left: 30px;
+}
+.navigation-section .nav .nav-list .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: 400ms ease-in;
+}
+.navigation-section .nav .nav-list .nav-item:hover {
+  border: 1px solid #ececec;
+  background: #103314;
+  padding-left: 30px;
+}
+.navigation-section .nav .nav-list .nav-item img {
+  font-size: 20px;
+  width: 2rem;
+}
+.navigation-section .nav .nav-list .nav-item .nav-link {
+  display: block;
+  color: #fff;
+}
+.navigation-section .nav .nav-list .nav-item .nav-item-toggle-mode {
+  width: 30px;
+  display: flex;
+  margin-right: 2rem;
+}
+
+.dashboard-section .dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #ececec;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
+}
+.dashboard-section .dashboard-header .dashboard-menu {
+  display: none;
+}
+.dashboard-section .dashboard-header .dashboard-title {
+  font-size: 1.8rem;
+  padding-left: 20px;
+  color: #103314;
+}
+.dashboard-section .dashboard-header .dashboard-admin-profile {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  gap: 2px;
+}
+.dashboard-section .dashboard-header .dashboard-admin-profile img {
+  color: black !important;
+  background: #ececec;
+  width: 30px;
+}
+.dashboard-section .dashboard-header .dashboard-admin-profile a {
+  color: #15631e;
+}
+.dashboard-section .dashboard-middle {
+  margin-top: 2.5rem;
+}
+.dashboard-section .dashboard-middle .dashboard-welcome {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #36d499;
+  border-radius: 5px;
+  width: 97%;
+  margin: 0 auto;
+}
+.dashboard-section .dashboard-middle .dashboard-welcome img {
+  width: 30px;
+}
+.dashboard-section .dashboard-middle .dashboard-welcome h5 {
+  font-size: 1rem;
+  font-weight: 100;
+}
+.dashboard-section .dashboard-cards {
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+.dashboard-section .dashboard-cards .dashboard-card {
+  border: 1px solid #ececec;
+  width: 18rem;
+  height: 9.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.166);
+  transition: 400ms ease-in-out;
+}
+.dashboard-section .dashboard-cards .dashboard-card:hover {
+  transform: scale(1.1);
+}
+.dashboard-section .dashboard-cards .dashboard-card .dashboard-card-top {
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+  border-bottom: 1px solid #ececec;
+}
+.dashboard-section .dashboard-cards .dashboard-card .dashboard-card-top img {
+  width: 5rem;
+}
+.dashboard-section .dashboard-cards .dashboard-card .dashboard-card-top .dashboard-card-info {
+  width: 100%;
+}
+.dashboard-section .dashboard-cards .dashboard-card .dashboard-card-top .dashboard-card-info .dashboard-card-title {
+  font-weight: 100;
+}
+.dashboard-section .dashboard-cards .dashboard-card .dashboard-card-top .dashboard-card-info .dashboard-card-number {
+  text-align: end;
+  padding-right: 10px;
+  font-size: 2rem;
+}
+.dashboard-section .dashboard-cards .dashboard-card .dashboard-card-bottom {
+  padding: 10px 20px;
+}
+.dashboard-section .dashboard-cards .dashboard-card .dashboard-card-bottom .dashboard-card-view {
+  color: rgb(191, 191, 191);
+}
+
+@media only screen and (max-width: 1080px) {
+  .container {
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+  .navigation-section {
+    width: 20rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    bottom: 0;
+    display: none;
+    overflow-y: scroll;
+  }
+  .navigation-section .top-nav .close-menu {
+    display: block;
+  }
+  .dashboard-section .dashboard-header .dashboard-menu {
+    display: block;
+    position: absolute;
+    top: 27px;
+    right: 120px;
+    cursor: pointer;
+  }
+  .dashboard-section .dashboard-header .dashboard-menu img {
+    width: 2rem;
+  }
+  .dashboard-section .dashboard-admin-profile h4 {
+    display: none;
+  }
+  .dashboard-cards {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=style.css.map */
